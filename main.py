@@ -1,8 +1,11 @@
 """
 Docstring to explain the script.
 """
+
 import random
+from time import sleep
 import art
+
 
 def easy_game(hide_number):
     """
@@ -22,8 +25,8 @@ def easy_game(hide_number):
             print("\nToo low.")
         else:
             print("\nToo high.")
-        print(f"You have {attempts} attempts remaining. \
-              You guessed the numbers {guessed_numbers}")
+        print(f"You have {attempts} attempts remaining.")
+        print(f"You guessed the numbers {guessed_numbers}")
         if attempts <= 3:
             print(f"You only have {attempts} and the first number is {number // 10}.")
         guess = input("Guess again: ")
@@ -60,8 +63,8 @@ def medium_game(hide_number):
             print("Too low.")
         else:
             print("Too high.")
-        print(f"You have {attempts} attempts remaining. \
-              You guessed the numbers {guessed_numbers}")
+        print(f"You have {attempts} attempts remaining.")
+        print(f"You guessed the numbers {guessed_numbers}")
         guess = input("Guess again: ")
         while not guess.isdigit() or int(guess) < 0 or int(guess) > 100:
             guess = input("Please, hit a valid number: ")
@@ -96,8 +99,8 @@ def hard_game(hide_number):
             print("Too low.")
         else:
             print("Too high.")
-        print(f"You have {attempts} attempts remaining. \
-              You guessed the numbers {guessed_numbers}")
+        print(f"You have {attempts} attempts remaining.")
+        print(f"You guessed the numbers {guessed_numbers}")
         guess = input("Guess again: ")
         while not guess.isdigit() or int(guess) < 0 or int(guess) > 100:
             guess = input("Please, hit a valid number: ")
@@ -118,10 +121,19 @@ def hard_game(hide_number):
 print(art.logo)
 print("Welcome to the number guessing game")
 print("I'm thinking of a number between 1 and 100")
+print(".")
+sleep(1)
+print("..")
+sleep(1)
+print("...")
+sleep(1)
+print("....")
+sleep(1)
+print(".....")
 
 number = random.randint(1, 101)
 
-difficulty_level = input("Chose a difficulty. Type 'easy', 'medium' or 'hard':\n").lower()
+difficulty_level = input("Choose a level. Type 'easy', 'medium' or 'hard':\n").lower()
 while difficulty_level not in "easymediumhard":
     difficulty_level = input("Chose a difficulty. Type 'easy', 'medium' or 'hard':\n").lower()
 if difficulty_level == "easy":
