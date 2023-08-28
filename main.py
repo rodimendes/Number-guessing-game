@@ -1,5 +1,5 @@
 """
-docstring
+Docstring to explain the script.
 """
 import random
 import art
