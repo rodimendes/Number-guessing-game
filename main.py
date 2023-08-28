@@ -1,7 +1,13 @@
+"""
+docstring
+"""
 import random
 import art
 
 def easy_game(hide_number):
+    """
+    Enter on medium level, with ten attempts and clues after seventh attempt.
+    """
     guessed_numbers = []
     attempts = 10
     print(f"You have {attempts} attempts remaining to guess the number.")
@@ -16,7 +22,8 @@ def easy_game(hide_number):
             print("\nToo low.")
         else:
             print("\nToo high.")
-        print(f"You have {attempts} attempts remainig to guess the number and guessed the numbers {guessed_numbers}")
+        print(f"You have {attempts} attempts remaining. \
+              You guessed the numbers {guessed_numbers}")
         if attempts <= 3:
             print(f"You only have {attempts} and the first number is {number // 10}.")
         guess = input("Guess again: ")
@@ -36,6 +43,9 @@ def easy_game(hide_number):
 
 
 def medium_game(hide_number):
+    """
+    Enter on medium level, with seven attempts.
+    """
     guessed_numbers = []
     attempts = 7
     print(f"You have {attempts} attempts remaining to guess the number.")
@@ -43,14 +53,15 @@ def medium_game(hide_number):
     while not guess.isdigit() or int(guess) < 0 or int(guess) > 100:
         guess = input("Please, hit a valid number: ")
     guess = int(guess)
-    while guess != hide_number and attempts > 1:         
+    while guess != hide_number and attempts > 1:
         guessed_numbers.append(guess)
         attempts -= 1
         if guess < hide_number:
             print("Too low.")
         else:
             print("Too high.")
-        print(f"You have {attempts} attempts remainig to guess the number and guessed the numbers {guessed_numbers}")
+        print(f"You have {attempts} attempts remaining. \
+              You guessed the numbers {guessed_numbers}")
         guess = input("Guess again: ")
         while not guess.isdigit() or int(guess) < 0 or int(guess) > 100:
             guess = input("Please, hit a valid number: ")
@@ -68,6 +79,9 @@ def medium_game(hide_number):
 
 
 def hard_game(hide_number):
+    """
+    Enter on hard level, with five attempts.
+    """
     guessed_numbers = []
     attempts = 5
     print(f"You have {attempts} attempts remaining to guess the number.")
@@ -75,14 +89,15 @@ def hard_game(hide_number):
     while not guess.isdigit() or int(guess) < 0 or int(guess) > 100:
         guess = input("Please, hit a valid number: ")
     guess = int(guess)
-    while guess != hide_number and attempts > 1:         
+    while guess != hide_number and attempts > 1:
         guessed_numbers.append(guess)
         attempts -= 1
         if guess < hide_number:
             print("Too low.")
         else:
             print("Too high.")
-        print(f"You have {attempts} attempts remainig to guess the number and guessed the numbers {guessed_numbers}")
+        print(f"You have {attempts} attempts remaining. \
+              You guessed the numbers {guessed_numbers}")
         guess = input("Guess again: ")
         while not guess.isdigit() or int(guess) < 0 or int(guess) > 100:
             guess = input("Please, hit a valid number: ")
