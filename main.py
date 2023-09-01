@@ -1,5 +1,5 @@
 """
-Just for fun.
+Just for fun and learn
 """
 
 import random
