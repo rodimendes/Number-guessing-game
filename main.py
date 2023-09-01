@@ -1,5 +1,5 @@
 """
-Docstring to explain the script.
+Just for fun
 """
 
 import random
