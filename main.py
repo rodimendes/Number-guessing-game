@@ -9,7 +9,7 @@ import art
 
 def easy_game(hide_number):
     """
-    Enter on medium level, with ten attempts and clues after seventh attempt.
+    Enter on easy level, with ten attempts and clues after seventh attempt.
     """
     guessed_numbers = []
     attempts = 10
