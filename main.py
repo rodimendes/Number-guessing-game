@@ -1,5 +1,5 @@
 """
-Just for fun
+Just a game.
 """
 
 import random
